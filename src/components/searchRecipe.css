@@ -1,0 +1,24 @@
+.recipe-search {
+    margin-bottom: 20px;
+}
+
+.recipe-search input {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+}
+
+.recipe-search button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.recipe-search button:hover {
+    background-color: #0056b3;
+}

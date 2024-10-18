@@ -3,7 +3,7 @@ import recipiSlice from './recipiSlice';
 
 const store = configureStore({
     reducer: {
-        recipiSlice: recipiSlice,
+        recipies: recipiSlice,
     }
 });
 
