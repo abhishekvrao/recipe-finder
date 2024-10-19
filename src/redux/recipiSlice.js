@@ -2,18 +2,11 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const SPOONACULAR_API_KEY = "519f3a9142f347fbb2b8e35f29991f3d";
-const API_URL = "https://api.spoonacular.com/recipes/complexSearch";
+const API_URL = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${SPOONACULAR_API_KEY}`;
 
 export const fetchRecipes = createAsyncThunk(
   "recipe/fetchRecipes",
-  async (_, { getState }) => {
-    const { filter } = getState().recipies;
-    const params = {
-      cuisine: filter.cuisine,
-      diet: filter.diet,
-      ingridient: filter.ingridient,
-      apiKey: SPOONACULAR_API_KEY,
-    };
+  async (params) => {
     const responses = await axios.get(API_URL, { params });
     return responses.data.results;
   }
@@ -26,7 +19,7 @@ const recipeSlice = createSlice({
     filter: {
       ingridient: "",
       diet: "",
-      cuisine: "",
+      cousine: "",
     },
     status: "idle",
   },

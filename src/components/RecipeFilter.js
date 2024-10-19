@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { setFilter, fetchRecipes } from "../redux/recipiSlice";
-import "./RecipeFilter.css"
+import "./RecipeFilter.css";
 const RecipeFilter = () => {
   const dispatch = useDispatch();
 
@@ -14,15 +14,18 @@ const RecipeFilter = () => {
     <div className="recipe-filter">
       <h4>Recipe Filter</h4>
       <select name="cousine" onChange={handleFilter}>
+        <option value="">Select Cuisine</option>
         <option value="italian">Italian</option>
         <option value="mexicon">Mexicon</option>
         <option value="indain">Indain</option>
       </select>
       <select name="diet" onChange={handleFilter}>
+        <option value="">Select Diet</option>
         <option value="vegitarion">Vegitarian</option>
         <option value="vegan">Vegan</option>
       </select>
       <select name="ingredient" onChange={handleFilter}>
+        <option value="">Select Ingredient</option>
         <option value="spicy">Spicy</option>
         <option value="salty">Salty</option>
       </select>
