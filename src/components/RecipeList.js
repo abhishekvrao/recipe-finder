@@ -3,8 +3,8 @@ import "./RecipeList.css";
 const RecipeList = () => {
   const { recipes, status } = useSelector((state) => state.recipies);
 
-  if (status == "Loading") return <p>Loading...</p>;
-  if (status == "failed") return <p>The recipe is not loaded</p>;
+  if (status === "Loading") return <p>Loading...</p>;
+  if (status === "failed") return <p>The recipe is not loaded</p>;
 
   return (
     <div className="recipe-list">
